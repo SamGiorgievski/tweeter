@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.button {
+  font-family: 'Bungee', cursive, sans-serif;
+  color: white;
+  background-color: darkblue;
+}
+
+.tweet-subtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive, sans-serif;
+  margin-top: 5px;
+}
+
+textarea {
+  background-color: #f4f1ec;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 3px;
+
+}
+
