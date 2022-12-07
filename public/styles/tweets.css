@@ -2,7 +2,8 @@ article {
   border: 2px;
   border-color:black;
   border-style:solid;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 article > * {
@@ -31,4 +32,9 @@ article > * {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.tweet-name-icon {
+  display: flex;
+  flex-direction: row;
 }
