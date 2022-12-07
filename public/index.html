@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -28,6 +29,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="./scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="./scripts/hover-icon.js"></script>
 
     
   </head>
@@ -56,9 +58,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p> Hi this is me</p>
-      <p> Hi this is also me</p>
-      <p> Hi this me again</p>
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -70,7 +69,35 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
+
+        <article>
+          <div class="tweet-header">
+            <p>Newton</p>
+            <p>@SirIsaac</p>
+          </div>
+
+          <div class="tweet-body">
+          <p>If I have seen further it is from standing on the shoulders of giants</p>
+          </div>
+
+          <div class="tweet-footer">
+            <p>10 days ago</p>
+            
+
+            <div class ="tweet-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+          </div>
+
+        </article>
+
       </section>
+
+
 
     </main>
   </body>
