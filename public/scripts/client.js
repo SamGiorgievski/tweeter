@@ -22,7 +22,8 @@ const createTweetElement = function(tweetObject) {
       </div>
 
       <div class="tweet-footer">
-            <p>${tweetObject.created_at}</p>
+      
+            <p>${timeago.format(tweetObject.created_at)}</p>
 
         <div class ="tweet-icons">
           <i class="fa-solid fa-flag"></i>
@@ -49,38 +50,9 @@ const renderTweets = function(tweets) {
 };
 
 
-// temp data
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
-
-
 $(document).ready(function() {
-  renderTweets(data);
 
-
+//  New Tweet POST request
   $('#tweet-form').on("submit", function (event) {
     event.preventDefault();
     const data = $(this).serialize();
@@ -92,10 +64,13 @@ $(document).ready(function() {
       });
   });
 
+// Load tweet GET request function
   function loadTweets () {
-
-    $.get('/tweets') 
-
+    
+    $.getJSON('/tweets', function(data) {
+      renderTweets(data);
+    }) 
+   
   }
 
   loadTweets();
