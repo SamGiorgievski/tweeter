@@ -66,15 +66,19 @@ const renderTweets = function(tweets) {
     const data = $(this).serialize();
 
     if (data.length > 145) {
-      alert("Error: Tweet is too long");
+      $(".error-container").slideDown();
+      $(".error-container").html("Error: Tweet is too long");
     } else if (data.length === null) {
-      alert("Error: Tweet value is null");
+      $(".error-container").slideDown();
+      $(".error-container").html("Error: Tweet evaluated as null. Please try again");
     } else if (data.length <=5) {
-      alert("Error: Tweet cannot be empty");
+      $(".error-container").slideDown();
+      $(".error-container").html("Error: Cannot tweet 0 characters");
     } else {
     $.post('/tweets', data)
       .then(function () {
         loadTweets();
+        $(".error-container").slideUp();
         $("#tweet-text").val("");
         $(".counter").text("140");
 

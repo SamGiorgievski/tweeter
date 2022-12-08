@@ -1,3 +1,9 @@
+.new-tweet {
+  margin-top: 25px;
+  display:flex;
+  flex-direction: column;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -25,6 +31,19 @@ textarea {
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 3px;
-
 }
+
+.error-container {
+  height: 50px;
+  border: 5px;
+  border-color: red;
+  border-style: solid;
+  margin-bottom: 25px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+ 
+}
+
 
