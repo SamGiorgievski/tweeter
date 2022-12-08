@@ -4,6 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 const createTweetElement = function(tweetObject) {
 
   let tweetArticle = `
@@ -18,7 +27,7 @@ const createTweetElement = function(tweetObject) {
       </div>
 
       <div class="tweet-body">
-        <p>${tweetObject.content.text}</p>
+        <p>${escape(tweetObject.content.text)}</p>
       </div>
 
       <div class="tweet-footer">
@@ -43,25 +52,34 @@ const renderTweets = function(tweets) {
 
   for (let tweet of tweets) {
     let tweetElement = createTweetElement(tweet);
-    $('.new-tweet').append(tweetElement);
+    $('.posted-tweets').prepend(tweetElement);
   }
 
   return;
 };
 
 
-$(document).ready(function() {
 
 //  New Tweet POST request
   $('#tweet-form').on("submit", function (event) {
     event.preventDefault();
     const data = $(this).serialize();
 
+    if (data.length > 145) {
+      alert("Error: Tweet is too long");
+    } else if (data.length === null) {
+      alert("Error: Tweet value is null");
+    } else if (data.length <=5) {
+      alert("Error: Tweet cannot be empty");
+    } else {
     $.post('/tweets', data)
-      .then(() => {
-        console.log("success");
+      .then(function () {
+        loadTweets();
+        $("#tweet-text").val("");
+        $(".counter").text("140");
 
       });
+    }
   });
 
 // Load tweet GET request function
