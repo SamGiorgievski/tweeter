@@ -20,7 +20,7 @@ const createTweetElement = function(tweetObject) {
       
       <div class="tweet-header">
         <div class="tweet-name-icon">
-          <img src=${tweetObject.user.avatars}>  
+          <img class="avatars" src=${tweetObject.user.avatars}>  
           <p>${tweetObject.user.name}</p>
         </div>
           <p>${tweetObject.user.handle}</p>
