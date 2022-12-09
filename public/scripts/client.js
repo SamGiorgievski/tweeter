@@ -55,28 +55,33 @@ $(document).ready(function() {
   //  New Tweet POST request
   $('#tweet-form').on("submit", function(event) {
     event.preventDefault();
+  
     const data = $(this).serialize();
+    const text = $(this).find("textarea").val();
 
-    if (data.length > 145) {
+    // Error handling
+    if (text.length > 140) {
       $(".error-container").slideDown();
       $(".error-container").html("Error: Tweet is too long");
-    } else if (data.length === null) {
-      $(".error-container").slideDown();
-      $(".error-container").html("Error: Tweet evaluated as null. Please try again");
-    } else if (data.length <= 5) {
+      return;
+    } 
+
+     if (!text) {
       $(".error-container").slideDown();
       $(".error-container").html("Error: Cannot tweet 0 characters");
-    } else {
-      $.post('/tweets', data)
-        .then(function() {
-          $('.posted-tweets').html("");
-          loadTweets();
-          $(".error-container").slideUp();
-          $("#tweet-text").val("");
-          $(".counter").text("140");
+      return;
+    }
+
+    // Post success
+    $.post('/tweets', data)
+      .then(function() {
+        $('.posted-tweets').html("");
+        loadTweets();
+        $(".error-container").slideUp();
+        $("#tweet-text").val("");
+        $(".counter").text("140");
 
         });
-    }
   });
 
   // Load tweet GET request function
