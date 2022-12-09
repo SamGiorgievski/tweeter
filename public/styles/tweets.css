@@ -30,6 +30,7 @@ article>* {
   border-right-width: 0px;
   border-color: black;
   border-style: solid;
+  overflow-wrap: break-word;
 }
 
 .tweet-footer {
