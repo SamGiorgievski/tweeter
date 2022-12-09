@@ -1,22 +1,14 @@
 article {
   border: 2px;
-  border-color:black;
-  border-style:solid;
+  border-color: black;
+  border-style: solid;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-article > * {
+article>* {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-i:hover { 
-  color: yellow;
-}
-
-article:hover{
-  box-shadow: 10px 10px 10px black;
 }
 
 .tweet-header {
@@ -37,7 +29,7 @@ article:hover{
   border-left-width: 0px;
   border-right-width: 0px;
   border-color: black;
-  border-style:solid;
+  border-style: solid;
 }
 
 .tweet-footer {
@@ -51,4 +43,12 @@ article:hover{
 .tweet-name-icon {
   display: flex;
   flex-direction: row;
+}
+
+i:hover {
+  color: yellow;
+}
+
+article:hover {
+  box-shadow: 10px 10px 10px black;
 }

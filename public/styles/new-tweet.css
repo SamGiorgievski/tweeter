@@ -1,6 +1,6 @@
 .new-tweet {
   margin-top: 25px;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -38,13 +38,12 @@ textarea {
   border-color: red;
   border-style: solid;
   margin-bottom: 25px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: red;
- 
-}
 
+}
 
 @media only screen and (min-width: 1024px) {
   header {
@@ -61,15 +60,11 @@ textarea {
     align-items: center;
     background-color: #d19600;
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-    }
+  }
 
   .new-tweet {
     width: 50%;
     float: right;
     margin-top: 200px;
   }
-
-
 }
-
-

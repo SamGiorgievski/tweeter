@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  console.log("ready");
 
+  // Character counter on tweet form
   $("#tweet-text").on("input", function() {
     const output = $(this).parent().find(".counter");
     let counter = $(this).val().length;
@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     output.text(characterRemaining);
 
-    if ( counter >= 140) {
+    if (counter > 140) {
       output.css('color', 'red');
     } else {
       output.css('color', 'black');
