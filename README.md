@@ -1,16 +1,19 @@
 # Tweeter App Project
-
-
+Tweeter app is a simple, single-page Twitter clone. The goal of this project was to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 ## Final Product
 
-!["Login page"]("link")
+!["Tweeter app full page"]("link")
+!["The character counter on the footer updates with each character entered"]("link")
+!["If tweet exceeds 140 characters, the counter turns red"]("link")
+!["Error handle example"]("link")
+!["After submitting a tweet, it prepends to the existing tweets"]("link")
+!["When screen size reaches 1024px, the layout changes"]("link")
 
 ## Dependencies
 
 - Node.js
 - Express
-- Jquery
 - nodemon (Dev dependency)
 
 ## Getting Started
