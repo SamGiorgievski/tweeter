@@ -3,12 +3,12 @@ Tweeter app is a simple, single-page Twitter clone. The goal of this project was
 
 ## Final Product
 
-!["Tweeter app full page"]("link")
-!["The character counter on the footer updates with each character entered"]("link")
-!["If tweet exceeds 140 characters, the counter turns red"]("link")
-!["Error handle example"]("link")
-!["After submitting a tweet, it prepends to the existing tweets"]("link")
-!["When screen size reaches 1024px, the layout changes"]("link")
+!["Tweeter app full page"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Tweeter%20App%20full%20page.png?raw=true")
+!["The character counter on the footer updates with each character entered"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Character%20counter.png?raw=true")
+!["If tweet exceeds 140 characters, the counter turns red"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Character%20counter%20(negative).png?raw=true")
+!["Error handle example"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Tweet%20error.png?raw=true")
+!["After submitting a tweet, it prepends to the existing tweets"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Tweet%20success.png?raw=true")
+!["When screen size reaches 1024px, the layout changes"]("https://github.com/SamGiorgievski/tweeter/blob/master/docs/Desktop%20mode.png?raw=true")
 
 ## Dependencies
 
