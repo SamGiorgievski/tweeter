@@ -11,6 +11,14 @@ article > * {
   margin-right: 10px;
 }
 
+i:hover { 
+  color: yellow;
+}
+
+article:hover{
+  box-shadow: 10px 10px 10px black;
+}
+
 .tweet-header {
   display: flex;
   flex-direction: row;

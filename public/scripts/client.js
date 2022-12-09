@@ -15,7 +15,7 @@ const escape = function (str) {
 
 const createTweetElement = function(tweetObject) {
 
-  let tweetArticle = `
+  let tweetArticle = $(`
     <article class="tweet">
       
       <div class="tweet-header">
@@ -41,7 +41,7 @@ const createTweetElement = function(tweetObject) {
       </div>
       </div>
     </article>
-    `;
+    `);
 
   return tweetArticle;
 };
@@ -55,8 +55,9 @@ const renderTweets = function(tweets) {
     $('.posted-tweets').prepend(tweetElement);
   }
 
-  return;
 };
+
+
 
 
 
@@ -96,5 +97,7 @@ const renderTweets = function(tweets) {
   }
 
   loadTweets();
+
+ 
 
 });
